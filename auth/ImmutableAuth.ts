@@ -17,7 +17,7 @@ const configuration: PassportModuleConfiguration = {
   baseConfig: new config.ImmutableConfiguration({
     environment: config.Environment.SANDBOX,
   }),
-  clientId: process.env.IMMUTABLE_APP_CLIENT_ID as string,
+  clientId: process.env.NEXT_PUBLIC_IMMUTABLE_APP_CLIENT_ID as string,
   redirectUri: `http://localhost:3000/callback`,
   logoutRedirectUri: 'http://localhost:3000/',
   audience: 'platform_api',
