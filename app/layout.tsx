@@ -13,11 +13,12 @@ import { passportInstance } from '../auth/ImmutableAuth'
 import useAuth from '../components/hooks/useAuth'
 
 import ScoreBoard from '../components/ScoreBoard'
+import Login from '../components/Login'
 
 // import type { Metadata } from 'next'
 // import { Inter } from 'next/font/google'
 import './globals.css'
-import Link from 'next/link';
+
 
 // const inter = Inter({ subsets: ['latin'] })
 
@@ -50,7 +51,7 @@ export default function RootLayout({gameModal}: { gameModal: React.ReactNode}) {
     if (!isAuthenticated) {
       router.push('/login');
     }
-  }, [isAuthenticated, router]);
+  }, []);
 
   const getUser = async () => {
     try {
@@ -107,7 +108,7 @@ export default function RootLayout({gameModal}: { gameModal: React.ReactNode}) {
             <main className=" text-white flex justify-center">
               {/* if auth is true display gameModal else login */}
               {isAuthenticated && gameModal}
-              
+              {!isAuthenticated && <Login/>}
             </main>
 
             <footer className=" flex justify-center text-white pb-20 font-Barlow ">

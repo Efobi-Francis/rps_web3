@@ -1,11 +1,15 @@
-import React, { useState } from 'react';
+"use client"
 
+import { useState } from 'react';
 
 // Create a provider component to wrap your app
 export function useScore() {
   const [score, setScore] = useState(() => {
-    const savedScore = localStorage.getItem('score');
-    return savedScore ? parseInt(savedScore, 10) : 0;
+    if (typeof window !== 'undefined') {
+      const savedScore = localStorage.getItem('score');
+      return savedScore ? parseInt(savedScore, 10) : 0;
+    }
+    return 0;
   });
 
   // Define a function to update the score

@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react";
-import { getAuthentication } from "../../auth/ImmutableAuth";
+import { getAuthentication } from "../auth/ImmutableAuth";
 
 export default function LoginComponent() {
   const [loading, setLoading] = useState(false)
