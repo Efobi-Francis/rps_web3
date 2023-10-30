@@ -17,13 +17,12 @@ const configuration: PassportModuleConfiguration = {
   baseConfig: new config.ImmutableConfiguration({
     environment: config.Environment.SANDBOX,
   }),
-  clientId: 'G5iz275x2JRsTAPMLexO5Q2QlutLuggE',
+  clientId: process.env.IMMUTABLE_APP_CLIENT_ID as string,
   redirectUri: `http://localhost:3000/callback`,
   logoutRedirectUri: 'http://localhost:3000/',
   audience: 'platform_api',
   scope: 'openid offline_access email transact'
 };
-console.log(process.env.IMMUTABLE_APP_CLIENT_ID);
 
 const passportInstance = new passport.Passport(configuration)
 const provider = passportInstance.connectEvm();
