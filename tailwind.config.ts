@@ -7,13 +7,24 @@ const config: Config = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+    fontFamily: {
+      'Barlow': ['Barlow Semi Condensed', 'system-ui']
+    },
+    
+    screens: {
+      'sm': '375px',
+      // => @media (min-width: 576px) { ... }
+      'lg': '1366px',
+      // => @media (min-width: 1366px) { ... }
+    },
+
+    container: {
+      padding: {
+        DEFAULT: '1rem',
       },
     },
+
+    extend: {},
   },
   plugins: [],
 }
