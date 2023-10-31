@@ -10,7 +10,6 @@ export default function useAuth() {
         const checkAuth = async () => {
           try {
             const isAccessToken = await passportInstance.getAccessToken()
-            console.log(isAccessToken)
             if (isAccessToken === undefined) {
               setIsAuthenticated(false);
             }
