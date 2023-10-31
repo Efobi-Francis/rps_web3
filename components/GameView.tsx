@@ -113,6 +113,12 @@ export default function GameView() {
 
             <footer className=" flex justify-center text-white pb-20 font-Barlow ">
               <button
+                onClick={()=> passportInstance.logout()}
+                className="relative bottom-10 border-2 border-white py-2 px-10 rounded-lg tracking-widest text-lg lg:absolute lg:bottom-0 lg:left-0 lg:mb-10 lg:ml-10"
+              >
+                LOGOUT
+              </button>
+              <button
                 onClick={handleClickOpen}
                 className="relative bottom-10 border-2 border-white py-2 px-10 rounded-lg tracking-widest text-lg lg:absolute lg:bottom-0 lg:right-0 lg:mb-10 lg:mr-10"
               >
