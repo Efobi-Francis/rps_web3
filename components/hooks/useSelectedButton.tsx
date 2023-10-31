@@ -9,7 +9,7 @@ export default function useSelectedButton() {
     setChoice(buttonSelected);
   };
 
-  console.log(choice)
+
   // Return both choice and handleUserChoice
   return { choice, handleUserChoice };
 }
