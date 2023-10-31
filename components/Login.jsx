@@ -19,6 +19,11 @@ export default function LoginComponent() {
   return(
     <>
       <div className=" w-full h-screen bg-gradient-to-b from-[hsl(214,47%,23%)] to-[hsl(237,49%,15%)] font-Barlow flex flex-col justify-center items-center">
+        <h1 className=" text-6xl text-white uppercase w-[35%] flex justify-between mb-10">
+          <span className="text-[hsl(349,71%,52%)]">rock</span>
+          <span className="text-[hsl(230,89%,62%)]">paper</span>
+          <span className="text-[hsl(39,89%,49%)]">scissors</span>  
+        </h1>
         <p className=" uppercase mb-5 text-white text-3xl">login to play game</p>
         <button onClick={handleLogin}
           disabled={loading}
