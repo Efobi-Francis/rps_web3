@@ -13,7 +13,7 @@ export function useScore() {
   });
 
   // Define a function to update the score
-  const updateScore = (result) => {
+  const updateScore = (result: string) => {
     if (result === 'win') {
       setScore(score + 1);
     } else if (result === 'lose' && score > 0) {

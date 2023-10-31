@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { BUTTON_TYPES } from "../data/button.jsx";
 
 import iconScissors from '../../public/assets/images/icon-scissors.svg'
@@ -76,7 +76,9 @@ export default function Button(props) {
 
       default:
     }
+
   }
+
 
   return (
     <button onClick={btnClick} className={`${getButtonClass()} ${btnPosition_Size}`}>{addButtonImg()}</button>
