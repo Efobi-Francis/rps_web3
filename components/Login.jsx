@@ -20,7 +20,7 @@ export default function LoginComponent() {
     <>
       <div className=" w-full h-screen bg-gradient-to-b from-[hsl(214,47%,23%)] to-[hsl(237,49%,15%)] font-Barlow flex flex-col justify-center items-center">
         <p className=" uppercase mb-5 text-white text-3xl">login to play game</p>
-        <button onClick={()=>handleLogin}
+        <button onClick={handleLogin}
           disabled={loading}
           className={`${btnStyle} ${loading ? 'opacity-50' : ''}`}>{loading ? "Loading..." : "Login to play"}
         </button>
