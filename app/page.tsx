@@ -9,8 +9,7 @@ export default function Home() {
 
   if (isAuthenticated) {
     return <GameView />;
-  }else {
-    return <Login />;
   }
 
+  return <Login />;
 }
