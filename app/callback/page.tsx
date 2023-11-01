@@ -10,7 +10,7 @@ export default function CallbackPage() {
         window.addEventListener("load", function () {
           passportInstance.loginCallback();
           router.push('/');
-          window.location.reload()
+          return window.location.reload()
           
         });
     }
