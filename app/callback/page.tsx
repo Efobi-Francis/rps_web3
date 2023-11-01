@@ -6,9 +6,11 @@ import { passportInstance } from '../../auth/ImmutableAuth';
 
 export default function CallbackPage() {
     // const router = useRouter();
-    window.addEventListener("load", function () {
-        passportInstance.loginCallback();
-        // return router.push('/select');
-    });
+    if (typeof window !== 'undefined') {
+        window.addEventListener("load", function () {
+          passportInstance.loginCallback();
+          // return router.push('/select');
+        });
+    }
 
 }
