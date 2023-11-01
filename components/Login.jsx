@@ -30,7 +30,7 @@ export default function LoginComponent() {
           className={`${btnStyle} ${loading ? 'opacity-50' : ''}`}>{loading ? "Loading..." : "Login to play"}
         </button>
         {loading && (
-          <div className=" mt-2">please manually reload after login ...</div>
+          <div className=" mt-2 text-white">please manually reload after login ...</div>
         )}
       </div>
     </>
