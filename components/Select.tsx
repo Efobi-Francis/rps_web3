@@ -104,7 +104,7 @@ export default function SelectContent() {
   return (
     <>
       <div className="lg:absolute lg:top-[30%]">
-        <div className="relative flex justify-center items-center">
+        <div className="relative flex justify-center items-center z-30">
           
           <Button
             type={BUTTON_TYPES.SCISSORS}

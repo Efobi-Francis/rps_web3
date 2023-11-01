@@ -39,5 +39,4 @@ export const getAuthentication = async () => {
 
 };
 
-
 export {passportInstance, provider}
