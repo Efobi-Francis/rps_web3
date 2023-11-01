@@ -28,14 +28,15 @@ const passportInstance = new passport.Passport(configuration)
 const provider = passportInstance.connectEvm();
 
 export const getAuthentication = async () => {
-  try {
-    const accounts = await provider.request({method: "eth_requestAccounts"});
-    console.log(accounts);
-  } catch (error) {
-    console.log(error);
-  } finally {
-    window.location.reload();
-  }
+    await provider.request({ method: "eth_requestAccounts" })
+        .then((accounts: any) => {
+            console.log(accounts)
+        }).catch((error: any) => {
+            console.log(error)
+        }).finally( ()=> {
+            window.location.reload()
+        })
+
 };
 
 

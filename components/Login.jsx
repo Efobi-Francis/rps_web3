@@ -29,6 +29,9 @@ export default function LoginComponent() {
           disabled={loading}
           className={`${btnStyle} ${loading ? 'opacity-50' : ''}`}>{loading ? "Loading..." : "Login to play"}
         </button>
+        {loading && (
+          <div className=" mt-2">please manually reload after login ...</div>
+        )}
       </div>
     </>
   )
