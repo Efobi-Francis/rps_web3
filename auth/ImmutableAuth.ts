@@ -18,8 +18,8 @@ const configuration: PassportModuleConfiguration = {
     environment: config.Environment.SANDBOX,
   }),
   clientId: process.env.NEXT_PUBLIC_IMMUTABLE_APP_CLIENT_ID as string,
-  redirectUri: `https://immutable-web3-rps-game.netlify.app/callback`,
-  logoutRedirectUri: 'https://immutable-web3-rps-game.netlify.app/',
+  redirectUri: `http://localhost:3000/callback`,
+  logoutRedirectUri: 'http://localhost:3000/',
   audience: 'platform_api',
   scope: 'openid offline_access email transact'
 };
