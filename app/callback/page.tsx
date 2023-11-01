@@ -11,6 +11,6 @@ export default function CallbackPage() {
           passportInstance.loginCallback();
           // return router.push('/select');
         });
+        window.close()
     }
-
 }
