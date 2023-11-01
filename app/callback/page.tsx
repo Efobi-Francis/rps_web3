@@ -5,12 +5,12 @@ import { useRouter } from 'next/navigation';
 import { passportInstance } from '../../auth/ImmutableAuth';
 
 export default function CallbackPage() {
-    const router = useRouter();
+    // const router = useRouter();
     if (typeof window !== 'undefined') {
         window.addEventListener("load", function () {
           passportInstance.loginCallback();
-          router.push('/');
-          return window.location.reload()
+        //   router.push('/');
+        //   return window.location.reload()
           
         });
     }
